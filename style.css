@@ -1,0 +1,365 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.section-inner-padding {
+  padding: 30px 50px;
+}
+
+.section-margin {
+  margin-top: 20px;
+}
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  padding: 20px 0px;
+  transition: all 0.4s ease-in-out;
+}
+
+header.active {
+  background: black;
+}
+
+.logo > a {
+  color: white;
+}
+
+.header-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.navbar ul li {
+  display: inline-block;
+  padding: 0px 40px;
+}
+
+nav.navbar > ul > li > a {
+  color: white;
+}
+
+.banner {
+  background: url("/images/banner.jpg");
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: 30% 10%;
+  position: relative;
+  color: white;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.5);
+}
+
+.credentials {
+  z-index: 1;
+  text-align: center;
+}
+
+.about-me-flex {
+  display: flex;
+  gap: 70px;
+}
+
+li.info-list-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.basic-info {
+  min-width: 35%;
+}
+
+li.info-list-flex > span:nth-child(1) {
+  font-weight: 600;
+}
+
+section.about-me {
+  margin-top: 40px;
+  box-shadow: 1px 1px 20px;
+  border-radius: 10px;
+}
+
+h3.skills-heading,
+h3.experience-heading,
+h3.portfolio-heading,
+h3.contact-heading {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 30px;
+}
+
+#skills {
+  margin-top: 20px;
+  box-shadow: 1px 1px 20px;
+  border-radius: 10px;
+}
+
+.my-skill-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skill-content {
+  width: 45%;
+  margin-bottom: 15px;
+}
+
+p.skill-name {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-progress-bar {
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  height: 10px;
+  border-radius: 10px;
+}
+
+.bar-width {
+  background: black;
+  height: 10px;
+  border-radius: 10px;
+}
+
+p.skill-name > span:nth-child(2) {
+  color: green;
+}
+
+#experience {
+  margin-top: 30px;
+}
+
+.exp-flex {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%);
+  margin-bottom: 30px;
+}
+
+.exp-company {
+  gap: 10px;
+  background: black;
+  color: white;
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-content {
+  grid-column: 2;
+  padding: 20px 40px;
+}
+
+.exp-company > p:nth-child(2) {
+  font-size: 18px;
+}
+
+.exp-company > p:nth-child(1) {
+  font-size: 14px;
+}
+
+p.designation {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#portfolio {
+  margin-top: 30px;
+}
+.portfolio-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.portfolio-width {
+  width: 49%;
+  height: 300px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  box-shadow: 0 5px 25px 0 rgb(0 0 0 / 20%);
+}
+
+.port-content {
+  text-align: center;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+p.portfo-project-name {
+  font-size: 30px;
+}
+
+.portfolio-width::after {
+  content: "";
+  background: rgb(0, 0, 0, 0.5);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  height: 0;
+  width: 0;
+  margin: auto;
+}
+
+.portfolio-width:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+.portfolio-width:hover .port-content {
+  opacity: 1;
+  z-index: 1;
+}
+
+#contact {
+  margin-top: 20px;
+  box-shadow: 1px 1px 20px;
+  border-radius: 10px;
+}
+
+form.contact-form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.input-feild {
+  width: 48%;
+}
+.input-feild input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  padding: 0px 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+}
+.input-area {
+  width: 100%;
+}
+.input-area textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 130px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  resize: none;
+}
+.input-btn {
+  width: 100%;
+  text-align: center;
+}
+.input-btn button {
+  padding: 10px 30px;
+  background: black;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.other-detail {
+  margin-bottom: 20px;
+}
+
+.other-detail h5 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.other-detail a {
+  color: white;
+}
+
+footer {
+  background: black;
+  padding: 20px 0px;
+  margin-top: 70px;
+}
+
+.footer-flex {
+  justify-content: space-around;
+  display: flex;
+  color: white;
+}
+
+.my-pic img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.my-pic {
+  z-index: 1;
+}
